@@ -1,15 +1,17 @@
-package com.stevendcoffey.androidboilerplate.fragment
+package com.stevendcoffey.androidboilerplate.base
 
-import android.app.Fragment
+import android.app.Activity
 import android.os.Bundle
-import com.stevendcoffey.androidboilerplate.annotations.findViewsForObject
 import com.stevendcoffey.androidboilerplate.annotations.restoreObjectInstanceState
 import com.stevendcoffey.androidboilerplate.annotations.saveObjectInstanceState
 
-open class BaseFragment: Fragment() {
+open abstract class BaseActivity: Activity() {
+
+    abstract val layout: Int
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(layout)
         restoreObjectInstanceState(this, savedInstanceState)
     }
 
@@ -17,14 +19,4 @@ open class BaseFragment: Fragment() {
         super.onSaveInstanceState(outState)
         saveObjectInstanceState(this, outState)
     }
-
-    override fun onViewCreated(view: android.view.View?, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        findViewsForObject(this, view)
-    }
-
-    override fun onPause() {
-        super.onPause()
-    }
 }
-

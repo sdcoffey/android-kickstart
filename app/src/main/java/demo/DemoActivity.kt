@@ -2,7 +2,7 @@ package demo
 
 import android.os.Bundle
 import com.stevendcoffey.androidboilerplate.R
-import com.stevendcoffey.androidboilerplate.fragment.BaseActivity
+import com.stevendcoffey.androidboilerplate.base.BaseActivity
 
 class DemoActivity : BaseActivity() {
 

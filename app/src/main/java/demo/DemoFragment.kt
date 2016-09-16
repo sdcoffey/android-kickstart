@@ -11,7 +11,7 @@ import android.widget.TextView
 import com.stevendcoffey.androidboilerplate.R
 import com.stevendcoffey.androidboilerplate.annotations.FindView
 import com.stevendcoffey.androidboilerplate.annotations.Retain
-import com.stevendcoffey.androidboilerplate.fragment.BaseFragment
+import com.stevendcoffey.androidboilerplate.base.BaseFragment
 
 class DemoFragment : BaseFragment(), View.OnClickListener, CompoundButton.OnCheckedChangeListener {
 
